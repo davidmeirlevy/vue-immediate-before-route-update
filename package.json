@@ -1,6 +1,6 @@
 {
   "name": "vue-immediate-before-route-update",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
@@ -10,10 +10,8 @@
   "author": "David Meir-Levy",
   "license": "MIT",
   "type": "commonjs",
-  "dependencies": {
-    "tsup": "^8.3.6"
-  },
   "devDependencies": {
+    "tsup": "^8.3.6",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
