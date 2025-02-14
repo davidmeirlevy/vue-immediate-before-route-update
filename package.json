@@ -1,0 +1,20 @@
+{
+  "name": "vue-immediate-before-route-update",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "David Meir-Levy",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "tsup": "^8.3.6"
+  },
+  "devDependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  }
+}
