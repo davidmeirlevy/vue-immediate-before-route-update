@@ -1,4 +1,4 @@
-import { NavigationGuard, onBeforeRouteUpdate, useRoute, useRouter } from 'vue-router';
+import { NavigationGuard, NavigationGuardNext, onBeforeRouteUpdate, useRoute, useRouter } from 'vue-router';
 
 export function onImmediateBeforeRouteUpdate(updateGuard: NavigationGuard) {
   const to = useRoute();
@@ -6,8 +6,8 @@ export function onImmediateBeforeRouteUpdate(updateGuard: NavigationGuard) {
 
   onBeforeRouteUpdate(updateGuard);
 
-  const res = new Promise((resolve) => {
-    const result = updateGuard(to, router.currentRoute.value, resolve);
+  const res = new Promise(async (resolve) => {
+    const result = updateGuard(to, router.currentRoute.value, <NavigationGuardNext>resolve);
     if (result?.then) {
       resolve(await result);
     }
